@@ -109,6 +109,7 @@ Add this to your `mcp.json`:
         // "MYSQL_CHARSET": "utf8mb4",
         // "MYSQL_COLLATION": "utf8mb4_unicode_ci"
       }
+    }
   }
 }
 ```
