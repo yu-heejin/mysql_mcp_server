@@ -34,26 +34,6 @@ MYSQL_PORT=3306         # Optional: Database port (defaults to 3306 if not speci
 MYSQL_USER=your_username
 MYSQL_PASSWORD=your_password
 MYSQL_DATABASE=your_database
-
-# Optional: Charset and collation settings for compatibility with older MySQL versions
-MYSQL_CHARSET=utf8mb4           # Optional: Character set (defaults to utf8mb4)
-MYSQL_COLLATION=utf8mb4_unicode_ci  # Optional: Collation (defaults to utf8mb4_unicode_ci)
-MYSQL_SQL_MODE=TRADITIONAL      # Optional: SQL mode (defaults to TRADITIONAL)
-```
-
-### Troubleshooting Collation Issues
-If you encounter the error "Unknown collation: 'utf8mb4_0900_ai_ci'", this typically means you're connecting to an older MySQL version (5.7 or earlier) that doesn't support the newer collation. The server now automatically uses compatible settings, but you can override them:
-
-For MySQL 5.7 and earlier:
-```bash
-MYSQL_CHARSET=utf8mb4
-MYSQL_COLLATION=utf8mb4_unicode_ci
-```
-
-For very old MySQL versions (5.6 and earlier):
-```bash
-MYSQL_CHARSET=utf8
-MYSQL_COLLATION=utf8_unicode_ci
 ```
 
 ## Usage
@@ -76,9 +56,6 @@ Add this to your `claude_desktop_config.json`:
         "MYSQL_USER": "your_username",
         "MYSQL_PASSWORD": "your_password",
         "MYSQL_DATABASE": "your_database"
-        // Optional: Add these if you encounter collation issues
-        // "MYSQL_CHARSET": "utf8mb4",
-        // "MYSQL_COLLATION": "utf8mb4_unicode_ci"
       }
     }
   }
@@ -104,9 +81,6 @@ Add this to your `mcp.json`:
         "MYSQL_USER": "your_username",
         "MYSQL_PASSWORD": "your_password",
         "MYSQL_DATABASE": "your_database"
-        // Optional: Add these if you encounter collation issues
-        // "MYSQL_CHARSET": "utf8mb4",
-        // "MYSQL_COLLATION": "utf8mb4_unicode_ci"
       }
     }
   }
