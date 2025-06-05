@@ -104,7 +104,7 @@ The MySQL MCP Server is designed to be integrated with AI applications like Clau
 ## Development
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mysql_mcp_server.git
+git clone https://github.com/designcomputer/mysql_mcp_server.git
 cd mysql_mcp_server
 # Create virtual environment
 python -m venv venv
